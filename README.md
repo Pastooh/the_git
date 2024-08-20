@@ -38,6 +38,7 @@ ls -al
 `git config --global user.email "$USERMAIL"` **Конфигурим подключение в конфиге git**<br>
 `git config --global init.defaultbranch "main"` **Меняем название дефолтной ветки**<br>
 `git config --list` **Проверяем переменные**<br>
+`ssh -T git@github.com` **Проверяем подключение по ssh**<br>
 `git remote add origin git@github.com:$USERNAME/$PROJECTNAME.git` **подключаем текущий репозиторий к удалённому. На Гитхаб должен быть прокинут ключ SSH**<br>
 `git remote -v` **проверка подключения**<br>
 `git push -u origin main` **публикуем в ветку main**<br>
