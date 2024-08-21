@@ -67,5 +67,20 @@ graph LR;
   modified         -- "git add"        --> staged,tracked;
 ``` 
 
+```mermaid
+---
+title: Вертикальная схема движения по статусам
+---
+stateDiagram-v2
+  [*]              --> untracked: git init
+  untracked        --> staged,tracked: git add
+  staged,tracked   --> tracked/comitted: git commit
+  staged,tracked   --> modified: change file
+  tracked/comitted --> modified: change file
+  modified         --> staged,tracked: git add
+note left of [*]
+            Это файлы в проекте до команды `git init`
+end note
+```
 
 
