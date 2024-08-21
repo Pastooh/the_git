@@ -53,10 +53,16 @@ ls -al
 
 `git status` выводит статусы untracked/tracked, staged и modified<br>
 
+### Test
 
 ```mermaid
-%% схема движения коммита по статусам
-graph LR;
-   untracked -- "git add" -- tracked
-   A --> B
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+```mermaid
+   info
 ```
