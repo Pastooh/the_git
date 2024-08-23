@@ -116,5 +116,5 @@ cat .gitignore
 ```
 
 # Работа с ветками
-`git branch` **Смотрим ветки в проекте локально**
-`git checkout -b feature/markets` **Создать новую ветку и переключиться в неё**
+`git branch` **Смотрим ветки в проекте локально**<br>
+`git checkout -b feature/markets` **Создать новую ветку и переключиться в неё**<br>
