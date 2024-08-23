@@ -83,4 +83,38 @@ note left of [*]
 end note
 ```
 
+### Для изменения последнего коммита(HEAD) следует использовать флаг --amend
+`git commit --amend -m "Новый комментарий"` **Меняет комментарий**<br>
+`git add new.file && git commit --amend --no-edit` **Добавляет в коммит новый файл**<br>
+`git commit --amend` **Открывает редактор для ручной правки**<br>
 
+### Для перевода файлов из статуса staged обратно в untracked(или в modified):
+`git add primer.txt` **Добавление ненужного файла**<br>
+`git restore --staged primer.txt` **Убираем файл**<br>
+
+### Откат коммита по хешу:
+`git log --oneline` **Ищем нужную точку**<br>
+`git reset --hard b576d89` **Хэш, на который нужно откатиться**<br>
+
+### Откат изменений в отслеживаемом файле:
+`git restore primer.txt`<br>
+
+### Просмотр и сравнение изменений:
+`git diff` **Сравнить последний коммит с текущим modified**<br>
+`git add . && git diff --staged` **Просмотр изменений в staged area**<br>
+`git log --oneline && git diff 91080da HEAD` **Сравнение первого и последнего коммитов**<br>
+
+### Игнорирование файлов:
+`git status --ignored`
+```
+cat .gitignore
+# ignore all
+**<br>
+# But not pdf|tex
+!**.tex<br>
+!**.pdf<br>
+```
+
+# Работа с ветками
+`git branch` **Смотрим ветки в проекте локально**
+`git checkout -b feature/markets` **Создать новую ветку и переключиться в неё**
